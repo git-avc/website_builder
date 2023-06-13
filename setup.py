@@ -11,8 +11,8 @@ from website_builder import __version__ as version
 class RunDevelopCommand(develop):
 	def run(self):
 		import subprocess
-		subprocess.check_output("playwright install chromium", shell=True)
 		develop.run(self)
+		subprocess.check_output("playwright install chromium", shell=True)
 
 
 setup(
